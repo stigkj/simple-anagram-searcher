@@ -3,6 +3,10 @@ apply plugin: 'executable-jar'
 
 mainClass = 'net.nisgits.anagram.Main'
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.3'
+}
+
 repositories {
     mavenCentral()
 }
