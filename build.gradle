@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+apply plugin: 'executable-jar'
+
+mainClass = 'net.nisgits.anagram.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:13.0.1'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
+
+    groovy 'org.codehaus.groovy:groovy:1.8.8'
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.nisgits.gradle:gradle-executable-jar-plugin:master-REL-6'
+    }
+}
